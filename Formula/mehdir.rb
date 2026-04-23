@@ -2,8 +2,8 @@ class Mehdir < Formula
   desc "CLI tool that creates temporary directories with a TTL"
   homepage "https://github.com/abhaikollara/mehdir"
   url "https://github.com/abhaikollara/mehdir.git",
-      tag:      "v0.1.0",
-      revision: "HEAD"
+      tag:      "v0.0.1",
+      revision: "adabf86050d1e4e41e53335c198c4b380e71f68f"
   license "MIT"
 
   depends_on "go" => :build
