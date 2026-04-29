@@ -1,15 +1,13 @@
 class Portscout < Formula
   desc "TUI tool to identify and kill processes occupying local ports"
   homepage "https://github.com/abhaikollara/portscout"
-  url "https://github.com/abhaikollara/portscout/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "440b982b879d755dab0a277ae70764fc4fea46afaffab606522655dca35f2ffe"
+  url "https://github.com/abhaikollara/portscout/releases/download/v0.1.0/portscout-v0.1.0-darwin-arm64.tar.gz"
+  sha256 "e47aed44b1c97162a10b5727d6c57f4fdaab89fa9527c79fd430d4860bd46eb3"
+  version "0.1.0"
   license "MIT"
 
-  depends_on "go" => :build
-
   def install
-    ldflags = "-s -w -X main.version=#{version}"
-    system "go", "build", *std_go_args(ldflags: ldflags), "."
+    bin.install "portscout"
   end
 
   test do
